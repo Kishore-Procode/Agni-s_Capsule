@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed-dim": "#bac7e4", "on-primary-container": "#7e8ba6", "surface-container-highest": "#c6e7fd", "on-tertiary-fixed-variant": "#633f00", "surface-container-low": "#e9f5ff", "surface": "#f5faff", "surface-tint": "#525f77", "on-primary-fixed-variant": "#3a475f", "error": "#ba1a1a", "primary": "#020e24", "secondary-fixed-dim": "#c9c6c1", "on-primary-fixed": "#0e1c31", "on-surface-variant": "#44474d", "surface-bright": "#f5faff", "tertiary-fixed-dim": "#f4bd74", "on-secondary-fixed": "#1c1c18", "tertiary-fixed": "#ffddb5", "outline-variant": "#c5c6cd", "error-container": "#ffdad6", "inverse-primary": "#bac7e4", "on-error-container": "#93000a", "surface-dim": "#bedff5", "on-error": "#ffffff", "on-tertiary-container": "#b28240", "on-surface": "#001e2c", "secondary-fixed": "#e5e2dc", "on-secondary-container": "#656460", "primary-container": "#17243a", "surface-container-lowest": "#ffffff", "secondary-container": "#e5e2dc", "inverse-surface": "#123445", "on-tertiary-fixed": "#2a1800", "surface-variant": "#c6e7fd", "on-tertiary": "#ffffff", "tertiary-container": "#351f00", "primary-fixed": "#d6e3ff", "secondary": "#5f5e5a", "on-background": "#001e2c", "inverse-on-surface": "#e3f3ff", "surface-container": "#ddf1ff", "on-secondary": "#ffffff", "on-primary": "#ffffff", "outline": "#75777e", "background": "#f5faff", "tertiary": "#180c00", "surface-container-high": "#d1ecff", "on-secondary-fixed-variant": "#474743" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "space-xl": "2.5rem", "gutter": "1.5rem", "space-sm": "0.5rem", "gutter-mobile": "1rem", "space-lg": "1.5rem", "margin": "3rem", "space-md": "1rem", "space-xs": "0.25rem", "margin-mobile": "1.25rem" }, fontFamily: { "title-md": ["Manrope"], "headline-lg-mobile": ["Playfair Display"], "display-lg-mobile": ["Playfair Display"], "body-lg": ["Manrope"], "label-sm": ["Manrope"], "display-lg": ["Playfair Display"], "label-md": ["Manrope"], "headline-lg": ["Playfair Display"], "headline-md": ["Playfair Display"], "body-md": ["Manrope"] }, fontSize: { "title-md": ["18px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "36px", "fontWeight": "500" }], "display-lg-mobile": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "700" }], "display-lg": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "600" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }], "headline-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.01em", "fontWeight": "500" }], "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "500" }], "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }] } } } };</script><style>@layer base{html,body{width:100%;margin:0;padding:0;min-height:100%;}body{overscroll-behavior-y:none;-webkit-tap-highlight-color:transparent;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased flex flex-col min-h-screen selection:bg-tertiary-fixed-dim selection:text-on-tertiary-fixed"><header class="fixed top-0 inset-x-0 z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_12px_rgba(2,14,36,0.06)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-sm min-w-0"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center shadow-[0_2px_8px_rgba(23,36,58,0.18)] flex-shrink-0"><span class="material-symbols-outlined text-tertiary-fixed-dim text-[20px]">hourglass_top</span></div><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md tracking-tight text-primary leading-none truncate">Agni's Capsule</span></div><div class="flex items-center gap-space-xs mt-0.5"><span class="inline-flex items-center px-1.5 py-0.5 rounded bg-surface-container text-on-primary-fixed-variant font-label-sm text-label-sm tracking-widest font-bold uppercase truncate">CSE BATCH OF 2027</span></div></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><div class="flex items-center gap-1 px-2 py-1 rounded bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm" title="AES-256 Vault Encrypted"><span class="material-symbols-outlined text-[15px] text-tertiary-fixed-dim fill-current">lock</span><span class="tracking-wider uppercase hidden sm:inline text-[9px]">AES-256</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center ring-2 ring-tertiary-fixed/30"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface"><div class="flex flex-col w-full px-gutter-mobile space-y-space-lg">
+<!-- Header Corridor -->
+<section class="flex flex-col space-y-space-xs pt-space-md">
+<div class="flex items-center space-x-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container bg-tertiary-fixed/30 px-2 py-0.5 rounded">
+        Temporal Chronology
+      </span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim"></span>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">88 Guardians Active</span>
+</div>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">
+      Journey of CSE 2027
+    </h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+      A vertical chronological ledger connecting freshmen memories, upcoming convocation, and decade-long alumni revelations.
+    </p>
+<!-- Ledger Filter Bar -->
+<div class="flex items-center gap-space-xs overflow-x-auto py-2 no-scrollbar">
+<button class="filter-btn active flex-shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md shadow-sm transition-all" data-filter="all">
+        All Milestones
+      </button>
+<button class="filter-btn flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all hover:bg-surface-container-high" data-filter="batch">
+        Batch Encrypted
+      </button>
+<button class="filter-btn flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all hover:bg-surface-container-high" data-filter="personal">
+        Personal Vault
+      </button>
+<button class="filter-btn flex-shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md transition-all hover:bg-surface-container-high" data-filter="alumni">
+        Alumni 2032+
+      </button>
+</div>
+</section>
+<!-- Epoch Scrubber Bar -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">tune</span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant">Epoch Scrubber</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">2023 — 2037</span>
+</div>
+<div class="relative flex items-center justify-between px-2 pt-2">
+<div class="absolute left-4 right-4 h-0.5 bg-outline-variant/30 top-1/2 -translate-y-1/2"></div>
+<button class="relative z-10 flex flex-col items-center group" onclick="scrollToMilestone('m-2023')">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-variant group-hover:scale-125 transition-transform flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 group-hover:text-primary">'23</span>
+</button>
+<button class="relative z-10 flex flex-col items-center group" onclick="scrollToMilestone('m-2025')">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-variant group-hover:scale-125 transition-transform flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 group-hover:text-primary">'25</span>
+</button>
+<button class="relative z-10 flex flex-col items-center group" onclick="scrollToMilestone('m-2027')">
+<span class="w-4 h-4 rounded-full bg-tertiary-fixed-dim shadow-[0_0_8px_rgba(244,189,116,0.6)] group-hover:scale-125 transition-transform flex items-center justify-center">
+<span class="material-symbols-outlined text-[10px] text-tertiary-container leading-none" style="font-variation-settings: 'FILL' 1;">stars</span>
+</span>
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container mt-1.5">'27</span>
+</button>
+<button class="relative z-10 flex flex-col items-center group" onclick="scrollToMilestone('m-2030')">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-high group-hover:scale-125 transition-transform flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 group-hover:text-primary">'30</span>
+</button>
+<button class="relative z-10 flex flex-col items-center group" onclick="scrollToMilestone('m-2032')">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-high group-hover:scale-125 transition-transform flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 group-hover:text-primary">'32</span>
+</button>
+<button class="relative z-10 flex flex-col items-center group" onclick="scrollToMilestone('m-2037')">
+<span class="w-3.5 h-3.5 rounded-full bg-surface-container-high group-hover:scale-125 transition-transform flex items-center justify-center">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant mt-1.5 group-hover:text-primary">'37</span>
+</button>
+</div>
+</section>
+<!-- Vertical Timeline Spine Corridors -->
+<section class="relative flex flex-col space-y-space-lg pb-space-xl">
+<!-- Dotted Axis line -->
+<div class="absolute left-4 top-2 bottom-6 w-0.5 border-l-2 border-dotted border-primary/20 pointer-events-none"></div>
+<!-- [PAST - 2023] Freshmen Induction -->
+<article class="milestone-card relative pl-10 flex flex-col group" data-category="batch" id="m-2023">
+<!-- Node pip -->
+<div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<!-- Envelope Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Past Epoch</span>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Nov 2023</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">check_circle</span>
+            Archived in Drive
+          </span>
+</div>
+<h2 class="font-title-md text-title-md text-primary">Freshmen Induction &amp; First C Program</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Lab 3 segfaults, midnight GCC debugging, and our inaugural collective batch photo on the main quad stairs.
+        </p>
+<!-- Media preview slice -->
+<div class="mt-3 rounded-lg bg-surface-container-low p-2.5 flex items-center gap-3">
+<div class="w-16 h-12 rounded bg-surface-container-highest overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="Vintage terminal screen displaying green monospace C programming code with pointer errors and hello world output, cinematic low light computer lab atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjjtODMBxghVfABBzJy5DnqMu4aOP4pKhwyQVWyOQE1gGQRUm2OXvPociz7is4YUTSkMOL1b4dtqAA-HypUtuZ57ivchx7EgxpjH9qv_EO06OBq2kG53QQYavc8_8JpgtZLycG5GfkeaYUpm-16nJKkoNTO4Cg39NC1PBpSOPraT4KUJv3gUO1reP7uYChe_kteiofbzRE4yJ0TnFgjMHOzqBZpA5L0jDHIqe4K9Ik"/>
+</div>
+<div class="flex-1 min-w-0">
+<div class="flex items-center gap-1 text-primary font-label-md text-label-md truncate">
+<span class="material-symbols-outlined text-[15px]">terminal</span>
+<span>lab01_segfault_final.c</span>
+</div>
+<div class="flex items-center gap-2 mt-0.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="flex items-center gap-0.5"><span class="material-symbols-outlined text-[13px]">mic</span> 2 Voice Notes</span>
+<span>•</span>
+<span>18 Contributors</span>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-primary hover:bg-surface-container-high transition-colors" title="Read Archived Ledger">
+<span class="material-symbols-outlined text-[18px]">visibility</span>
+</button>
+</div>
+</div>
+</article>
+<!-- [PAST - 2025] Systems Practicum -->
+<article class="milestone-card relative pl-10 flex flex-col group" data-category="personal" id="m-2025">
+<div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Past Epoch</span>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">March 2025</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified</span>
+            Delivered &amp; Sealed
+          </span>
+</div>
+<h2 class="font-title-md text-title-md text-primary">Junior Year Systems Practicum &amp; All-Nighter</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          48-hour distributed filesystem sprint in Old Academic Block. 14 cups of filter coffee logged.
+        </p>
+<div class="mt-3 flex items-center justify-between pt-2">
+<div class="flex items-center -space-x-1.5">
+<div class="w-6 h-6 rounded-full bg-primary-container text-tertiary-fixed-dim text-[10px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">AG</div>
+<div class="w-6 h-6 rounded-full bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">RK</div>
+<div class="w-6 h-6 rounded-full bg-surface-container text-on-surface-variant text-[10px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">+4</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant italic">Fingerprint: 0x9F42..C11B</span>
+</div>
+</div>
+</article>
+<!-- [PRESENT / MAJOR MILESTONE - June 15, 2027] Convocation Seal -->
+<article class="milestone-card relative pl-10 flex flex-col group" data-category="batch" id="m-2027">
+<!-- Golden Wax Seal Pip -->
+<div class="absolute left-2.5 top-2 -translate-x-1/2 w-6 h-6 rounded-full bg-tertiary-container shadow-[0_0_12px_rgba(244,189,116,0.6)] flex items-center justify-center">
+<span class="material-symbols-outlined text-[14px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<!-- Archival Manuscript Card with Golden Wax Metaphor -->
+<div class="relative bg-gradient-to-b from-surface-container-lowest to-surface-container-low rounded-xl p-space-md shadow-md overflow-hidden">
+<!-- Ambient decorative seal crest watermark in top-right -->
+<div class="absolute -right-4 -top-4 w-28 h-28 rounded-full bg-tertiary-fixed/15 pointer-events-none flex items-center justify-center">
+<span class="material-symbols-outlined text-[64px] text-tertiary-fixed-dim/30">school</span>
+</div>
+<div class="flex items-center justify-between mb-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-tertiary-fixed-dim/30 text-on-tertiary-fixed-variant font-label-sm text-label-sm font-bold tracking-wider uppercase">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-container animate-pulse"></span>
+            Apex Milestone
+          </span>
+<span class="font-label-sm text-label-sm font-bold text-on-tertiary-container">June 15, 2027</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">
+          B.Tech CSE Graduation &amp; Convocation Seal
+        </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1.5">
+          The central vault unlocks during the degree conferment ceremony in the Main Auditorium. Contains class farewell documentary and 88 unread future vows.
+        </p>
+<!-- Countdown Banner -->
+<div class="mt-3.5 bg-primary-container rounded-lg p-3 text-on-primary flex items-center justify-between shadow-inner">
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-primary-container">Countdown to Opening</span>
+<div class="flex items-baseline gap-1 mt-0.5">
+<span class="font-headline-md text-headline-md text-tertiary-fixed-dim font-bold">382</span>
+<span class="font-body-md text-body-md text-surface-container-highest">Days Remaining</span>
+</div>
+</div>
+<div class="w-11 h-11 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center shadow-md">
+<span class="material-symbols-outlined text-[24px]">hourglass_bottom</span>
+</div>
+</div>
+<!-- Archival Asset Preview Mosaic -->
+<div class="mt-3 grid grid-cols-2 gap-2">
+<div class="h-20 rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Warm sepia and indigo tinted auditorium with empty graduation stage, wooden lectern, and theatrical overhead spotlights, quiet anticipation atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgWOUNrBHTs3Kt6o_JGoekeV6eT2ATc1nlTC-rDpXA7j2tD90N8HkUCyqtoQfIDAoQhhO6QGbbdrVgOtlcCB6fdHhyPme8QxfJ_ZopAyAvq6PofIKVjKB-NGRuYs-dr4DrSIruaFuJKZ_Sym1Uf2HVzaQWDDA8a6xY7ZpRZT1ABfpGHAUAdr4QH9aPkST9koEil7nocuptlT4zakTu6R-cD8NGfxdxdSvlL_jV2-r6"/>
+<div class="absolute inset-0 bg-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-container-lowest text-[22px]">play_circle</span>
+</div>
+</div>
+<div class="h-20 rounded-lg bg-surface-container p-2 flex flex-col justify-between">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<span class="font-label-sm text-label-sm font-bold">88 Letters Ready</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant line-clamp-2">Batch pledge encrypted with 4096-bit master key ring.</p>
+</div>
+</div>
+<!-- Vault Seal Trigger CTA -->
+<div class="mt-3.5 pt-3 flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">fingerprint</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">0x7C..2027</span>
+</div>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-tertiary-fixed-dim hover:bg-primary-container font-label-md text-label-md shadow-sm transition-all flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px]">edit_note</span>
+            Contribute Letter
+          </button>
+</div>
+</div>
+</article>
+<!-- [FUTURE - Nov 10, 2030] 3-Year Engineering Checkpoint -->
+<article class="milestone-card relative pl-10 flex flex-col group" data-category="personal" id="m-2030">
+<div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Future Horizon</span>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Nov 10, 2030</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-primary-container text-tertiary-fixed font-label-sm text-label-sm font-semibold">
+<span class="material-symbols-outlined text-[12px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">lock</span>
+            AES-256 Vault
+          </span>
+</div>
+<h2 class="font-title-md text-title-md text-primary">First SDE Promotion / 3-Year Engineering Checkpoint</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          A sealed self-inquiry written on the eve of final placements: "Did you build the open distributed compiler or succumb to corporate sprint cycles?"
+        </p>
+<div class="mt-3 p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px] text-on-surface-variant">mark_email_unread</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-medium">Personal Dispatch #04</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Scheduled delivery to personal email</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">schedule</span>
+</div>
+</div>
+</article>
+<!-- [FUTURE - June 2032] 5-Year CSE Reunion -->
+<article class="milestone-card relative pl-10 flex flex-col group" data-category="alumni" id="m-2032">
+<div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-tertiary-container font-semibold">Alumni Epoch</span>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">June 2032</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px] text-tertiary-fixed-dim">group_work</span>
+            Quorum Required
+          </span>
+</div>
+<h2 class="font-title-md text-title-md text-primary">5-Year CSE 2027 Alumni Reunion Capsule</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Locked until physical reunion meetup. Requires at least 25 classmate cryptokey handshakes in person to decrypt the master time-lapse archive.
+        </p>
+<!-- Quorum Threshold Indicator -->
+<div class="mt-3 flex flex-col space-y-1.5">
+<div class="flex justify-between items-center text-on-surface-variant font-label-sm text-label-sm">
+<span>Cryptographic Keys Registered</span>
+<span class="font-semibold text-primary">44 / 88 Guardians</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container rounded-full overflow-hidden">
+<div class="h-full bg-tertiary-fixed-dim rounded-full" style="width: 50%"></div>
+</div>
+</div>
+</div>
+</article>
+<!-- [DEEP HORIZON - 2037] 10-Year Epoch Letter -->
+<article class="milestone-card relative pl-10 flex flex-col group" data-category="alumni" id="m-2037">
+<div class="absolute left-2.5 top-1.5 -translate-x-1/2 w-3.5 h-3.5 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center">
+<span class="w-2 h-2 rounded-full bg-outline-variant"></span>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm transition-all hover:shadow-md">
+<div class="flex items-center justify-between mb-1.5">
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Deep Time Seal</span>
+<span class="font-label-sm text-label-sm text-outline-variant">•</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">Autumn 2037</span>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-highest text-on-primary-fixed-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[13px]">cyclone</span>
+            10-Year Leap
+          </span>
+</div>
+<h2 class="font-title-md text-title-md text-primary">10-Year Epoch Letter: Where Did Our Code Go?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">
+          Reflections across 10 years of technological paradigm shifts. A philosophical retrospective stored across distributed cold archival nodes.
+        </p>
+<div class="mt-3 flex items-center justify-between pt-2">
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px] text-tertiary-fixed-dim">verified</span>
+<span>Immutable cold storage active</span>
+</div>
+<span class="font-label-sm text-label-sm font-mono text-secondary">BLOCK #142071</span>
+</div>
+</div>
+</article>
+</section>
+<!-- Interactive Dispatch / Seal Footer Bar -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col space-y-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/30 flex items-center justify-center text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+</div>
+<div>
+<h3 class="font-title-md text-title-md text-primary">Deposit a Milestone Secret</h3>
+<p class="font-body-md text-body-md text-on-surface-variant text-[13px]">Attach a memory to the 2027 convocation vault or future epoch.</p>
+</div>
+</div>
+<div class="pt-2 flex gap-2">
+<button class="flex-1 py-2 rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container transition-colors shadow-sm text-center">
+        Create Letter Capsule
+      </button>
+<button class="px-3.5 py-2 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-high transition-colors">
+        Export Ledger
+      </button>
+</div>
+</section>
+</div>
+<script>
+  function scrollToMilestone(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      el.classList.add('scale-[1.01]');
+      setTimeout(() => el.classList.remove('scale-[1.01]'), 400);
+    }
+  }
+
+  // Filter interaction
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.milestone-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => {
+        b.classList.remove('active', 'bg-primary', 'text-on-primary');
+        b.classList.add('bg-surface-container', 'text-on-surface-variant');
+      });
+      btn.classList.add('active', 'bg-primary', 'text-on-primary');
+      btn.classList.remove('bg-surface-container', 'text-on-surface-variant');
+
+      const filter = btn.getAttribute('data-filter');
+      cards.forEach(card => {
+        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+</script></main><nav class="fixed bottom-0 inset-x-0 z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_16px_rgba(2,14,36,0.05)]" data-active-classes="text-primary font-bold"><div class="flex items-center justify-around h-16 px-gutter-mobile relative"><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="overview" href="#"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-sm text-label-sm mt-0.5">Overview</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="batch-2027" href="#"><span class="material-symbols-outlined text-[22px]">school</span><span class="font-label-sm text-label-sm mt-0.5">Batch '27</span></a><div class="relative -top-4 flex flex-col items-center"><a class="w-13 h-13 p-3 rounded-full bg-primary-container text-tertiary-fixed-dim shadow-[0_4px_18px_rgba(244,189,116,0.35)] flex items-center justify-center transition-transform active:scale-95 ring-4 ring-surface" data-path="create-capsule" href="#"><span class="material-symbols-outlined text-[24px]">history_edu</span></a><span class="font-label-sm text-label-sm mt-1 text-on-surface-variant font-medium">Create</span></div><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] transition-colors text-primary font-bold" data-path="timeline" href="#"><span class="material-symbols-outlined text-[22px]">timeline</span><span class="font-label-sm text-label-sm mt-0.5">Timeline</span></a><a class="flex flex-col items-center justify-center min-w-[56px] min-h-[44px] text-on-surface-variant hover:text-on-surface transition-colors" data-path="vault" href="#"><span class="material-symbols-outlined text-[22px]">enhanced_encryption</span><span class="font-label-sm text-label-sm mt-0.5">Vault</span></a></div></nav></body></html>

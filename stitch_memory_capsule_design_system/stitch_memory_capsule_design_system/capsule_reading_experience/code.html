@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_stack" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary-fixed-dim": "#c9c6c1", "on-secondary-container": "#656460", "tertiary-fixed-dim": "#f4bd74", "on-secondary": "#ffffff", "secondary-fixed": "#e5e2dc", "outline-variant": "#c5c6cd", "on-background": "#001e2c", "tertiary-fixed": "#ffddb5", "error-container": "#ffdad6", "on-primary-fixed": "#0e1c31", "surface": "#f5faff", "on-error-container": "#93000a", "on-tertiary-container": "#b28240", "on-secondary-fixed-variant": "#474743", "on-tertiary-fixed": "#2a1800", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "surface-dim": "#bedff5", "secondary-container": "#e5e2dc", "primary-fixed-dim": "#bac7e4", "on-secondary-fixed": "#1c1c18", "background": "#f5faff", "primary-container": "#17243a", "primary-fixed": "#d6e3ff", "surface-container": "#ddf1ff", "tertiary-container": "#351f00", "surface-tint": "#525f77", "inverse-on-surface": "#e3f3ff", "surface-bright": "#f5faff", "on-tertiary-fixed-variant": "#633f00", "surface-container-low": "#e9f5ff", "on-surface-variant": "#44474d", "on-primary": "#ffffff", "on-tertiary": "#ffffff", "on-surface": "#001e2c", "inverse-primary": "#bac7e4", "surface-container-high": "#d1ecff", "on-error": "#ffffff", "on-primary-fixed-variant": "#3a475f", "surface-container-highest": "#c6e7fd", "tertiary": "#180c00", "outline": "#75777e", "on-primary-container": "#7e8ba6", "primary": "#020e24", "surface-variant": "#c6e7fd", "secondary": "#5f5e5a", "inverse-surface": "#123445" }, borderRadius: { "DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem" }, spacing: { "margin": "3rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "space-lg": "1.5rem", "gutter-mobile": "1rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter": "1.5rem", "space-sm": "0.5rem" }, fontFamily: { "display-lg": ["Playfair Display"], "label-md": ["Manrope"], "headline-lg-mobile": ["Playfair Display"], "body-lg": ["Manrope"], "headline-md": ["Playfair Display"], "headline-lg": ["Playfair Display"], "title-md": ["Manrope"], "display-lg-mobile": ["Playfair Display"], "body-md": ["Manrope"], "label-sm": ["Manrope"] }, fontSize: { "display-lg": ["56px", { lineHeight: "64px", letterSpacing: "-0.02em", fontWeight: "600" }], "label-md": ["12px", { lineHeight: "16px", letterSpacing: "0.05em", fontWeight: "600" }], "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "500" }], "body-lg": ["16px", { lineHeight: "26px", fontWeight: "400" }], "headline-md": ["24px", { lineHeight: "32px", fontWeight: "500" }], "headline-lg": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "500" }], "title-md": ["18px", { lineHeight: "26px", letterSpacing: "0.01em", fontWeight: "600" }], "display-lg-mobile": ["36px", { lineHeight: "44px", letterSpacing: "-0.01em", fontWeight: "600" }], "body-md": ["14px", { lineHeight: "22px", fontWeight: "400" }], "label-sm": ["10px", { lineHeight: "14px", letterSpacing: "0.08em", fontWeight: "700" }] } } } };</script><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-gutter-mobile flex items-center justify-between"><div class="flex items-center gap-space-xs"><button aria-label="Go back" class="w-11 h-11 flex items-center justify-center text-on-surface hover:text-primary transition-colors" onclick="history.back()"><span class="material-symbols-outlined text-[24px]">arrow_back</span></button><img alt="Memory Capsule Logo" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE9ikr22j1RGuQ0JIlZ0A_mIl-5GSK0yYuw_7KNPGX45xdC1Qm8vQDZOv402NRLxtTrEBfsocLJdTK94fgm8qqeOQbIdsQVNUel6p3NdhFbi-hYYV8pHRJze1uHCZLgrqlEjXqXJFt8klJLAzzHO1ZtI7lR4ZSynLInMIqIIk1slmCFJ2fK-ZsdPzKsFuifVGOoW09DGzpVSHxQK8Y_UgJbtrnmFDk1pBqlEWcn2U9"/><h1 class="font-headline-md text-title-md text-primary font-medium tracking-tight truncate max-w-[180px]">Capsule Reveal</h1></div><div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-[20px] text-on-tertiary-container">enhanced_encryption</span><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-on-tertiary-container/30" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhF0H0BDBICwrS4ZPRC9RH7wUKenievJY46yMtNTkSy5zEMB4SBW2YUPHvtUU--Ar8fQjsSXB9mLgnK0m8ZKIKt_R2uEsvv3CrIL2NCAdh2SP9dkG1ngXSgO7ZOLfLEqY9Lf8CvGrs1i_6c9wsCKsTVUCoxBUYIzAqZftI_NPB6Rilw71kJ5j-JFXFVfEYKpjzxiC6mw4Eg806FrK2sryzXgNYLKkoHxec6uoZnwJB"/></div></div></header><main class="flex flex-col relative w-full px-gutter-mobile pt-16 pb-safe bg-surface flex-1"><div class="flex flex-col w-full pb-10">
+<!-- Status & Vault Chronicle Header -->
+<div class="flex flex-col items-center text-center mt-2 mb-6">
+<div class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface shadow-sm">
+<span class="material-symbols-outlined text-[15px] text-on-tertiary-container animate-pulse">lock_open_right</span>
+<span class="font-label-md text-label-md tracking-wider uppercase font-semibold">Decrypted on March 28, 2026</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-sm text-label-sm text-secondary tracking-widest uppercase">Temporal Seal 0x8F92...B3</span>
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+</div>
+</div>
+<!-- Hero Opened Linen Envelope Container -->
+<div class="relative w-full rounded-xl bg-surface-container-lowest shadow-md overflow-hidden transition-all">
+<!-- Wax Seal Residue & Envelope Flap Motif -->
+<div class="relative w-full bg-secondary-container/40 pt-4 pb-5 px-5 flex flex-col items-center justify-center">
+<!-- Broken Seal Iconography / Illustration -->
+<div class="relative flex items-center justify-center">
+<!-- Broken Wax Base -->
+<div class="w-12 h-12 rounded-full bg-tertiary-container flex items-center justify-center shadow-inner relative">
+<div class="w-10 h-10 rounded-full bg-on-tertiary-container/80 flex items-center justify-center text-surface-container-lowest">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">mark_email_read</span>
+</div>
+<!-- Broken Fragment indicator -->
+<div class="absolute -bottom-1 -right-1 w-3.5 h-3.5 rounded-full bg-on-tertiary-container shadow-sm rotate-45"></div>
+</div>
+</div>
+<!-- Provenance Meta Details -->
+<div class="text-center mt-3">
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-secondary font-bold">Archive Record #MC-2022-0518</p>
+<p class="font-headline-md text-headline-md text-primary font-medium mt-0.5">Written on May 18, 2022</p>
+<p class="font-body-md text-body-md text-on-surface-variant font-medium">by Maya Lin</p>
+</div>
+<!-- Delivery Chronometer Pill -->
+<div class="mt-3 inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-surface-container text-on-primary-fixed shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">history_toggle_off</span>
+<span class="font-label-md text-label-md font-semibold">Delivered after 3 yrs, 10 mos in time vault</span>
+</div>
+<!-- Cryptographic Authenticity Banner -->
+<div class="mt-2.5 flex items-center gap-1.5 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span>Verified sender &amp; cryptographic timestamp intact</span>
+</div>
+</div>
+<!-- Letter Paper Interior with Archival Texture -->
+<div class="p-6 bg-surface-container-lowest">
+<div class="flex items-center justify-between mb-4">
+<span class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Personal Manuscript</span>
+<div class="flex items-center gap-1 text-on-tertiary-container">
+<span class="material-symbols-outlined text-[16px]">sentiment_satisfied</span>
+<span class="font-label-sm text-label-sm font-semibold">Vault Grade A</span>
+</div>
+</div>
+<!-- Letter Body Typography -->
+<article class="space-y-4">
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-primary leading-relaxed font-normal">
+          Dear Elena,
+        </p>
+<p class="font-body-lg text-body-lg text-on-surface leading-loose font-normal">
+          If you are reading this, it means four full years have quietly passed since we crammed for our art history finals in the rainy library basement, sipping lukewarm coffee and dreaming about who we would become out in the wild world.
+        </p>
+<p class="font-body-lg text-body-lg text-on-surface leading-loose font-normal">
+          Did you actually pack your bags and move to San Francisco like we promised under that starry magnolia tree? Are you still addicted to that ridiculous iced lavender latte from the cafe on 4th Street?
+        </p>
+<p class="font-body-lg text-body-lg text-on-surface leading-loose font-normal">
+          Whatever storms you have weathered, whatever mountains you have climbed or unlearned—I need you to pause right now, take a deep breath, and remember just how fiercely proud 21-year-old us was of your quiet bravery. We knew you would make it here.
+        </p>
+</article>
+<!-- Signature -->
+<div class="mt-8 pt-4 flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-primary italic font-medium">With all my love across time,</span>
+<span class="font-title-md text-title-md text-on-surface font-semibold tracking-wide mt-1">Maya</span>
+</div>
+<!-- Keepsake Attachments Section -->
+<div class="mt-8 pt-6 bg-surface-container-low p-4 rounded-lg">
+<div class="flex items-center gap-2 mb-4">
+<span class="material-symbols-outlined text-on-tertiary-container text-[20px]">inventory_2</span>
+<h2 class="font-title-md text-title-md text-primary font-semibold">Archived Enclosures (2)</h2>
+</div>
+<!-- Polaroid Keepsake Card -->
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm mb-4">
+<div class="relative w-full aspect-[4/3] rounded overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="A sunlit, vintage style instant photo of two young women college students laughing joyfully while lying on a sun-dappled green university lawn surrounded by notebooks, warm golden afternoon lighting, nostalgic film grain texture, tactile heirloom aesthetic with soft muted ivory, navy, and amber tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjLcNWGfyv8WnnwIABCz7augkXfnIX9BbSTPuafDcX0PKP5zkFAZqFLcHxxHYvfWMV4VzfSFHr3fwlVVyXdGQ_x2eyluOUbd8i4CRVYlNSMGFP0oNoIAO-ZuIVXFm5SxXcwzAPpOTGD-hQEVQdMWL5CZm0xmHQy-Nswo4Aa3uYTlMpOaQp03Ia5tAmrvI9hUb3p3tZPTh-r_hqNZlaAtxsPVmsCiwlal8AkKcOTrEQ"/>
+<div class="absolute top-2 right-2 px-2 py-0.5 rounded-full bg-primary/70 text-on-primary font-label-sm text-label-sm backdrop-blur-sm">
+              May 2022
+            </div>
+</div>
+<div class="pt-3 pb-1 text-center">
+<p class="font-headline-md text-headline-md italic text-primary">“The day before senior graduation on the quad”</p>
+</div>
+</div>
+<!-- Interactive Voice Memo Keepsake -->
+<div class="bg-surface-container-lowest p-4 rounded-lg shadow-sm">
+<div class="flex items-center justify-between mb-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[20px]">mic</span>
+<div>
+<p class="font-title-md text-title-md text-primary font-semibold leading-tight">Audio Letter from Senior Year</p>
+<p class="font-label-sm text-label-sm text-secondary">Original voice recording • 1:45</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container text-on-primary-fixed font-label-sm text-label-sm font-bold">Uncompressed</span>
+</div>
+<!-- Waveform Visualizer & Playback Control -->
+<div class="mt-3 flex items-center gap-3">
+<button aria-label="Play audio memo" class="w-10 h-10 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-md active:scale-95 transition-transform" id="playBtn">
+<span class="material-symbols-outlined text-[24px]" id="playIcon">play_arrow</span>
+</button>
+<div class="flex-1 flex flex-col gap-1">
+<!-- Waveform SVG Bars -->
+<div class="flex items-center gap-1 h-7 px-1">
+<span class="w-1 bg-on-tertiary-container h-3 rounded-full"></span>
+<span class="w-1 bg-on-tertiary-container h-5 rounded-full"></span>
+<span class="w-1 bg-on-tertiary-container h-7 rounded-full"></span>
+<span class="w-1 bg-on-tertiary-container h-4 rounded-full"></span>
+<span class="w-1 bg-primary h-6 rounded-full"></span>
+<span class="w-1 bg-primary h-5 rounded-full"></span>
+<span class="w-1 bg-primary h-3 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-6 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-4 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-7 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-5 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-2 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-6 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-4 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-3 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-5 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-2 rounded-full"></span>
+<span class="w-1 bg-secondary-fixed-dim h-4 rounded-full"></span>
+</div>
+<div class="flex justify-between items-center px-1 text-secondary font-label-sm text-label-sm">
+<span id="timeElapsed">0:24</span>
+<span>1:45</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Intimate Recipient Action Deck -->
+<div class="mt-6 flex flex-col gap-3">
+<!-- Primary Delivery Confirmation -->
+<button class="w-full py-3.5 px-4 rounded-lg bg-primary text-on-primary flex items-center justify-center gap-2 shadow-md active:opacity-90 transition-all" id="ackButton">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">done_all</span>
+<span class="font-title-md text-title-md font-semibold tracking-wide">Acknowledge &amp; Notify Maya</span>
+</button>
+<!-- Keepsake Vault Storage -->
+<div class="grid grid-cols-2 gap-3">
+<button class="py-3 px-3 rounded-lg bg-surface-container text-primary flex items-center justify-center gap-1.5 shadow-sm active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container" style="font-variation-settings: 'FILL' 1;">bookmark_added</span>
+<span class="font-label-md text-label-md font-semibold">Save to Keepsakes</span>
+</button>
+<!-- Reply Capsule Into the Future -->
+<button class="py-3 px-3 rounded-lg bg-surface-container text-primary flex items-center justify-center gap-1.5 shadow-sm active:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">schedule_send</span>
+<span class="font-label-md text-label-md font-semibold">Reply into 2030</span>
+</button>
+</div>
+<!-- Security Footnote -->
+<div class="mt-2 text-center">
+<p class="font-label-sm text-label-sm text-secondary">
+        Decrypted via Zero-Knowledge Key on recipient device • Permanent local ledger verified
+      </p>
+</div>
+</div>
+</div>
+<script>
+  // Simple micro-interactions for audio toggle and acknowledgement state
+  const playBtn = document.getElementById('playBtn');
+  const playIcon = document.getElementById('playIcon');
+  let isPlaying = false;
+
+  playBtn?.addEventListener('click', () => {
+    isPlaying = !isPlaying;
+    playIcon.textContent = isPlaying ? 'pause' : 'play_arrow';
+  });
+
+  const ackButton = document.getElementById('ackButton');
+  ackButton?.addEventListener('click', () => {
+    ackButton.classList.remove('bg-primary');
+    ackButton.classList.add('bg-tertiary-container');
+    ackButton.innerHTML = `
+      <span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+      <span class="font-title-md text-title-md font-semibold tracking-wide text-on-tertiary">Maya has been notified!</span>
+    `;
+  });
+</script></main></body></html>

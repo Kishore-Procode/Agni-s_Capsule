@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&amp;family=Playfair+Display:ital,wght@0,500;0,600;1,500&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-container":"#351f00","secondary-fixed-dim":"#c9c6c1","secondary-container":"#e5e2dc","on-surface":"#001e2c","on-secondary-fixed-variant":"#474743","secondary":"#5f5e5a","primary":"#020e24","on-surface-variant":"#44474d","on-secondary":"#ffffff","secondary-fixed":"#e5e2dc","tertiary-fixed":"#ffddb5","outline":"#75777e","surface":"#f5faff","on-secondary-container":"#656460","tertiary":"#180c00","background":"#f5faff","on-primary":"#ffffff","outline-variant":"#c5c6cd","on-primary-container":"#7e8ba6","on-error-container":"#93000a","on-tertiary":"#ffffff","surface-container":"#ddf1ff","on-primary-fixed":"#0e1c31","on-secondary-fixed":"#1c1c18","surface-container-high":"#d1ecff","on-primary-fixed-variant":"#3a475f","primary-fixed-dim":"#bac7e4","error-container":"#ffdad6","surface-bright":"#f5faff","surface-tint":"#525f77","surface-container-highest":"#c6e7fd","inverse-on-surface":"#e3f3ff","tertiary-fixed-dim":"#f4bd74","inverse-primary":"#bac7e4","on-background":"#001e2c","surface-variant":"#c6e7fd","inverse-surface":"#123445","primary-fixed":"#d6e3ff","primary-container":"#17243a","surface-container-low":"#e9f5ff","surface-container-lowest":"#ffffff","on-tertiary-fixed-variant":"#633f00","on-tertiary-container":"#b28240","error":"#ba1a1a","surface-dim":"#bedff5","on-error":"#ffffff","on-tertiary-fixed":"#2a1800"},borderRadius:{DEFAULT:"0.125rem",lg:"0.25rem",xl:"0.5rem",full:"0.75rem"},spacing:{margin:"3rem","space-xl":"2.5rem","gutter-mobile":"1rem",gutter:"1.5rem","space-md":"1rem","space-lg":"1.5rem","margin-mobile":"1.25rem","space-xs":"0.25rem","space-sm":"0.5rem"},fontFamily:{"body-md":["Manrope"],"label-sm":["Manrope"],"title-md":["Manrope"],"headline-lg":["Playfair Display"],"body-lg":["Manrope"],"headline-lg-mobile":["Playfair Display"],"display-lg":["Playfair Display"],"label-md":["Manrope"],"display-lg-mobile":["Playfair Display"],"headline-md":["Playfair Display"]},fontSize:{"body-md":["14px",{lineHeight:"22px",fontWeight:"400"}],"label-sm":["10px",{lineHeight:"14px",letterSpacing:"0.08em",fontWeight:"700"}],"title-md":["18px",{lineHeight:"26px",letterSpacing:"0.01em",fontWeight:"600"}],"headline-lg":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"500"}],"body-lg":["16px",{lineHeight:"26px",fontWeight:"400"}],"headline-lg-mobile":["28px",{lineHeight:"36px",fontWeight:"500"}],"display-lg":["56px",{lineHeight:"64px",letterSpacing:"-0.02em",fontWeight:"600"}],"label-md":["12px",{lineHeight:"16px",letterSpacing:"0.05em",fontWeight:"600"}],"display-lg-mobile":["36px",{lineHeight:"44px",letterSpacing:"-0.01em",fontWeight:"600"}],"headline-md":["24px",{lineHeight:"32px",fontWeight:"500"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased"><header class="fixed top-0 left-0 right-0 h-20 bg-surface-container-lowest/90 backdrop-blur-xl z-50 shadow-[0_1px_8px_rgba(23,36,58,0.06)]"><div class="w-full h-20 px-gutter flex items-center justify-between gap-gutter"><div class="flex items-center gap-space-md"><div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-on-tertiary-container shadow-[0_2px_6px_rgba(23,36,58,0.18)]"><span class="material-symbols-outlined text-[22px]">history_edu</span></div><div class="flex flex-col"><span class="font-headline-md text-title-md text-primary tracking-tight leading-none">Agni's Capsule</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest mt-space-xs">B.Tech CSE Batch of 2027 Vault</span></div><div class="hidden xl:flex items-center gap-space-xs px-space-sm py-1 bg-surface-container-low rounded-full ml-space-sm"><span class="w-2 h-2 rounded-full bg-on-tertiary-container animate-pulse"></span><span class="font-label-sm text-label-sm text-on-surface-variant">142 Verified Engineers • Convocation June 2027</span></div></div><div class="hidden md:flex flex-1 max-w-md mx-space-md"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-[18px]">search</span><input class="w-full bg-surface-container-low text-on-surface placeholder:text-on-surface-variant pl-10 pr-space-md py-2 rounded-lg font-body-md text-body-md focus:bg-surface-container-lowest focus:outline-none transition-all" placeholder="Search archives, roll numbers, squad ciphers..." type="text"/></div></div><div class="flex items-center gap-space-md"><div class="relative flex items-center"><button aria-label="Notifications" class="w-9 h-9 rounded-full bg-surface-container-low hover:bg-surface-container hover:text-on-surface flex items-center justify-center text-on-surface-variant transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">notifications</span></button><span class="absolute -top-0.5 -right-0.5 w-4 h-4 bg-tertiary-container text-tertiary-fixed text-[9px] font-bold rounded-full flex items-center justify-center shadow-sm">3</span></div><div class="flex items-center gap-space-sm pl-space-xs"><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div><div class="hidden lg:flex flex-col text-left"><span class="font-label-md text-label-md text-on-surface leading-tight">Cadet Contributor</span><span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold">Class Contributor</span></div></div></div></div></header><aside class="fixed left-0 top-20 bottom-0 w-64 bg-surface-container-lowest z-40 flex flex-col justify-between py-space-lg shadow-[1px_0_12px_rgba(23,36,58,0.03)]"><div class="flex flex-col gap-space-lg"><div class="px-space-lg"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">Registry Navigation</span></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary-container text-on-primary font-semibold rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="batch-27-hub" href="#"><span class="material-symbols-outlined text-[20px]">hub</span>Batch '27 Hub</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="timeline" href="#"><span class="material-symbols-outlined text-[20px]">hourglass_top</span>Timeline</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="my-capsules" href="#"><span class="material-symbols-outlined text-[20px]">inventory_2</span>My Capsules</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="class-squads" href="#"><span class="material-symbols-outlined text-[20px]">groups</span>Class Squads</a><a class="flex items-center gap-space-sm px-space-md py-2.5 rounded-lg font-body-md text-body-md text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" data-path="cold-vault" href="#"><span class="material-symbols-outlined text-[20px]">lock_clock</span>Cold Vault</a></nav></div><div class="px-space-md"><div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-xs"><div class="flex items-center gap-space-xs text-on-tertiary-container"><span class="material-symbols-outlined text-[16px]">verified</span><span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Institutional Seal</span></div><p class="font-label-sm text-label-sm text-on-surface-variant">Encrypted SHA-256 ledger locked until June 18, 2027 Convocation.</p></div></div></aside><div class="pl-64"><main class="relative pt-20 w-full min-h-screen bg-surface px-gutter"><div class="flex flex-col w-full">
+<!-- Subtle Parchment Grain Overlay & Ambient Atmosphere Container -->
+<div class="relative w-full pb-space-xl">
+<!-- TOP COMMAND HUB BANNER & STATS -->
+<section class="relative w-full pt-space-md pb-space-lg">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg pb-space-lg">
+<div class="flex flex-col max-w-3xl">
+<div class="flex items-center gap-space-xs mb-space-xs">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container font-semibold">
+              Dept. of Computer Science &amp; Engineering • Batch of 2027
+            </span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary tracking-tight font-serif leading-[1.08] text-balance">
+            Agni's Batch Capsule Ledger
+          </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-space-sm leading-relaxed max-w-2xl">
+            Preserving hackathons, midnight git commits, dorm debates, and future graduation promises until 2037 &amp; beyond. Sealed by decentralized peer quorum.
+          </p>
+</div>
+<!-- Action Ribbon -->
+<div class="flex flex-wrap items-center gap-space-sm self-start lg:self-end">
+<button class="group relative px-space-md py-2.5 bg-primary text-on-primary rounded-lg font-title-md text-body-md shadow-md hover:bg-primary-container transition-all flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed-dim">verified</span>
+<span>Contribute Memory Artifact</span>
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim group-hover:scale-125 transition-transform"></span>
+</button>
+<button class="px-space-md py-2.5 bg-surface-container-lowest text-primary rounded-lg font-title-md text-body-md shadow-sm hover:bg-surface-container-low transition-colors flex items-center gap-space-xs" type="button">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant">key</span>
+<span>Class Roster &amp; Keys</span>
+</button>
+<button class="w-10 h-10 rounded-lg bg-surface-container-lowest text-on-surface-variant hover:text-primary hover:bg-surface-container-low shadow-sm flex items-center justify-center transition-colors" title="Export Ledger Snapshot" type="button">
+<span class="material-symbols-outlined text-[20px]">download</span>
+</button>
+</div>
+</div>
+<!-- Stat Cards Strip (Desktop 4-Col Grid) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md mt-space-sm">
+<!-- Metric 1 -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="absolute -right-4 -bottom-4 w-20 h-20 bg-surface-container-low rounded-full opacity-40 pointer-events-none"></div>
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Active Guardians</span>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">military_tech</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-serif text-primary leading-none">142</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-1">CSE Engineers Registered</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-on-tertiary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span>100% Cryptographic Enrollment</span>
+</div>
+</div>
+<!-- Metric 2 -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Cold Preservation</span>
+<span class="material-symbols-outlined text-[18px] text-primary">lock</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-serif text-primary leading-none">38</div>
+<div class="font-label-md text-label-md text-on-surface-variant mt-1">Group Vaults Sealed</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">shield</span>
+<span>Zero decryptions allowed prior to date</span>
+</div>
+</div>
+<!-- Metric 3 -->
+<div class="relative bg-primary-container p-space-md rounded-xl shadow-sm text-on-primary overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-tertiary-fixed-dim mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Convocation Horizon</span>
+<span class="material-symbols-outlined text-[18px]">event_upcoming</span>
+</div>
+<div>
+<div class="font-headline-lg text-headline-lg font-serif text-white leading-none">382 <span class="text-body-md font-sans font-normal text-on-primary-container">Days Left</span></div>
+<div class="font-label-md text-label-md text-tertiary-fixed-dim mt-1">Target: June 15, 2027</div>
+</div>
+<div class="flex items-center gap-1.5 mt-space-sm text-on-primary-container font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-tertiary-fixed-dim animate-ping"></span>
+<span>Epoch #2027-BTECH-CSE countdown</span>
+</div>
+</div>
+<!-- Metric 4 -->
+<div class="relative bg-surface-container-lowest p-space-md rounded-xl shadow-sm overflow-hidden flex flex-col justify-between">
+<div class="flex items-center justify-between text-on-surface-variant mb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-wider font-semibold">Vault Capacity</span>
+<span class="material-symbols-outlined text-[18px] text-on-tertiary-container">donut_large</span>
+</div>
+<div>
+<div class="flex items-baseline gap-2">
+<span class="font-headline-lg text-headline-lg font-serif text-primary leading-none">94%</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">4.7 / 5.0 GB</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2 overflow-hidden">
+<div class="bg-on-tertiary-container h-full rounded-full" style="width: 94%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-between mt-space-sm font-label-sm text-label-sm text-on-surface-variant">
+<span>284 Media Bundles</span>
+<span class="text-on-tertiary-container font-semibold">SHA-256 Armed</span>
+</div>
+</div>
+</div>
+</section>
+<!-- HERO SPOTLIGHT DUAL-PANEL -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mt-space-sm">
+<!-- Flagship Capsule: The 3 AM Hackathon & Bug Graveyard (60% Desktop -> 7 Cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between relative overflow-hidden">
+<!-- Archival Parchment Texture Gradient Accent -->
+<div class="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-on-tertiary-container via-tertiary-fixed-dim to-primary"></div>
+<div>
+<!-- Meta Tags & Ciphers -->
+<div class="flex flex-wrap items-center justify-between gap-space-xs pb-space-sm">
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="material-symbols-outlined text-[12px]">lock_clock</span>
+                Locked • Convocation 2027
+              </span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-primary font-mono">
+                HASH: 0x7c9f..2027
+              </span>
+</div>
+<div class="flex items-center gap-1 text-on-surface-variant font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px] text-on-tertiary-container">archive</span>
+<span>28 Artifacts Encrypted</span>
+</div>
+</div>
+<!-- Title & Editorial Description -->
+<h2 class="font-headline-lg text-headline-lg font-serif text-primary mt-space-xs leading-tight">
+            The 3 AM Hackathon &amp; Bug Graveyard
+          </h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed italic font-serif">
+            “Audio recordings of our broken compiler screaming at 4 AM before HackMIT, plus raw terminal logs, merge conflict tears, and our victory cold pizza bills.”
+          </p>
+<!-- Audio Preview & Media Strip -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<button aria-label="Play recording preview" class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center shadow-sm hover:scale-105 transition-transform" type="button">
+<span class="material-symbols-outlined text-[18px]">play_arrow</span>
+</button>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-semibold">quad_3am_breakdown.wav</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">C-Wing Lab Room 404 • 04:12 Duration</span>
+</div>
+</div>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-lowest text-on-tertiary-container font-bold">FLAC 24-bit Lossless</span>
+</div>
+<!-- Stylized SVG Audio Waveform -->
+<div class="w-full h-8 flex items-center gap-0.5 px-1 py-1 bg-surface-container-lowest rounded">
+<div class="flex-1 h-3 bg-primary/20 rounded-full"></div>
+<div class="flex-1 h-5 bg-primary/40 rounded-full"></div>
+<div class="flex-1 h-7 bg-primary rounded-full"></div>
+<div class="flex-1 h-4 bg-primary/30 rounded-full"></div>
+<div class="flex-1 h-6 bg-on-tertiary-container rounded-full"></div>
+<div class="flex-1 h-8 bg-on-tertiary-container rounded-full"></div>
+<div class="flex-1 h-5 bg-primary/60 rounded-full"></div>
+<div class="flex-1 h-2 bg-primary/20 rounded-full"></div>
+<div class="flex-1 h-6 bg-primary/50 rounded-full"></div>
+<div class="flex-1 h-7 bg-on-tertiary-container rounded-full"></div>
+<div class="flex-1 h-4 bg-primary/30 rounded-full"></div>
+<div class="flex-1 h-6 bg-primary/70 rounded-full"></div>
+<div class="flex-1 h-8 bg-primary rounded-full"></div>
+<div class="flex-1 h-3 bg-primary/20 rounded-full"></div>
+<div class="flex-1 h-5 bg-primary/40 rounded-full"></div>
+<div class="flex-1 h-2 bg-primary/20 rounded-full"></div>
+<div class="flex-1 h-4 bg-primary/40 rounded-full"></div>
+<div class="flex-1 h-6 bg-primary/60 rounded-full"></div>
+<div class="flex-1 h-3 bg-primary/20 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Footnote Contributors & Buttons -->
+<div class="pt-space-md mt-space-md flex flex-col sm:flex-row sm:items-center justify-between gap-space-md">
+<!-- Avatars Stack -->
+<div class="flex items-center gap-space-xs">
+<div class="flex -space-x-2 overflow-hidden p-0.5">
+<div class="inline-block h-8 w-8 rounded-full bg-primary-container text-tertiary-fixed text-[11px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">AG</div>
+<div class="inline-block h-8 w-8 rounded-full bg-surface-container-high text-primary text-[11px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">NK</div>
+<div class="inline-block h-8 w-8 rounded-full bg-tertiary-container text-tertiary-fixed text-[11px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">SR</div>
+<div class="inline-block h-8 w-8 rounded-full bg-secondary-container text-primary text-[11px] font-bold flex items-center justify-center ring-2 ring-surface-container-lowest">TM</div>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-medium">+24 classmates sealed</span>
+</div>
+<!-- CTAs -->
+<div class="flex items-center gap-space-xs">
+<button class="px-space-sm py-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px] text-on-tertiary-container">fingerprint</span>
+<span>View Escrow</span>
+</button>
+<button class="px-space-md py-2 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-label-md text-label-md font-semibold transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">mic</span>
+<span>Deposit Voice / Photo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Quorum Escrow Protocol (40% Desktop -> 5 Cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl shadow-md p-space-lg flex flex-col justify-between">
+<div>
+<!-- Header Bar -->
+<div class="flex items-center justify-between pb-space-xs">
+<div class="flex items-center gap-1.5 text-on-tertiary-container">
+<span class="material-symbols-outlined text-[18px]">enhanced_encryption</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Multi-Party Computation</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">
+              AES-256 GCM
+            </span>
+</div>
+<h3 class="font-headline-md text-headline-md font-serif text-primary mt-space-xs">
+            Live Quorum Escrow Protocol
+          </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-snug">
+            Batch decryption keys are fragmented into Shamir shards. 88 class signatures are mathematically mandated to unlock on Convocation Day.
+          </p>
+<!-- Circular Metric & Progress Stats -->
+<div class="mt-space-md p-space-md bg-surface-container-low rounded-lg flex items-center gap-space-md">
+<!-- Inline SVG Circular Ring -->
+<div class="relative w-20 h-20 shrink-0 flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<path class="text-surface-container-high" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-width="3.5"></path>
+<path class="text-on-tertiary-container" d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831" fill="none" stroke="currentColor" stroke-dasharray="66, 100" stroke-linecap="round" stroke-width="3.5"></path>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center">
+<span class="font-title-md text-title-md font-serif text-primary font-bold">66%</span>
+<span class="font-label-sm text-[8px] text-on-surface-variant leading-none uppercase">Quorum</span>
+</div>
+</div>
+<!-- Signatory Progress Tally -->
+<div class="flex flex-col">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-md text-headline-md font-serif text-primary font-bold">58</span>
+<span class="font-body-md text-body-md text-on-surface-variant">/ 88 verified keys collected</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-tertiary-container font-semibold mt-0.5">
+                30 Signatures needed before auto-sharding freeze
+              </p>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-1">Next validator: Roll 23CS084 pending signature</span>
+</div>
+</div>
+<!-- Active Signatories Feed -->
+<div class="mt-space-sm flex flex-col gap-1.5">
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-on-surface-variant font-semibold">Latest Key Commitments</span>
+<div class="space-y-1">
+<div class="flex items-center justify-between text-body-md text-on-surface p-1.5 rounded bg-surface-container-lowest text-[12px]">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-mono text-primary font-semibold">Rhea Sharma (23CS012)</span>
+</div>
+<span class="text-on-surface-variant text-[11px] font-mono">14m ago • Verified PGP</span>
+</div>
+<div class="flex items-center justify-between text-body-md text-on-surface p-1.5 rounded bg-surface-container-lowest text-[12px]">
+<div class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container"></span>
+<span class="font-mono text-primary font-semibold">Aditya Verma (23CS045)</span>
+</div>
+<span class="text-on-surface-variant text-[11px] font-mono">1h ago • Verified PGP</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Copyable Quorum Invite Link -->
+<div class="mt-space-md pt-space-sm">
+<div class="flex items-center gap-1 bg-surface-container-low p-1.5 rounded-lg">
+<input class="bg-transparent font-mono text-label-sm text-on-surface px-2 w-full focus:outline-none" readonly="" type="text" value="capsule.agni.edu/cse27/quorum-join?ref=quad"/>
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary hover:bg-surface text-label-sm font-semibold transition-colors shrink-0 flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[14px]">content_copy</span>
+<span>Copy</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- MAIN CONTENT SPLIT (Left Primary Archives 8 Cols / Right Verified Labs 4 Cols) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg mt-space-xl">
+<!-- Primary Column: Capsule Circles & Class Archives (8 cols) -->
+<div class="lg:col-span-8 flex flex-col gap-space-md">
+<!-- Section Header & Filter Tabs -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-xs">
+<div>
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-tertiary-container font-semibold">Archival Corridors</span>
+<h3 class="font-headline-md text-headline-md font-serif text-primary">Class Archives &amp; Squad Circles</h3>
+</div>
+<!-- Filter Pills -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-primary font-label-sm text-label-sm font-bold shadow-sm" type="button">All (8)</button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-primary font-label-sm text-label-sm font-medium transition-colors" type="button">Intake Open (3)</button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-primary font-label-sm text-label-sm font-medium transition-colors" type="button">Armored (5)</button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-primary font-label-sm text-label-sm font-medium transition-colors" type="button">10-Yr Leaps (2)</button>
+</div>
+</div>
+<!-- Capsule Card 1: Final Year Project & Thesis Pact -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md items-start">
+<!-- Thumbnail / Visual Hash Diff Snapshot -->
+<div class="w-full md:w-48 h-36 bg-primary-container rounded-lg shrink-0 p-space-sm flex flex-col justify-between relative overflow-hidden text-on-primary">
+<div class="flex items-center justify-between">
+<span class="material-symbols-outlined text-tertiary-fixed-dim text-[18px]">terminal</span>
+<span class="font-mono text-[9px] text-tertiary-fixed uppercase">git.diff.v27</span>
+</div>
+<div class="font-mono text-[10px] text-on-primary-container leading-tight">
+<div>+ import torch.nn as nn</div>
+<div>- loss.backward() # crashed</div>
+<div class="text-tertiary-fixed">+ return convocation_model</div>
+</div>
+<div class="flex items-center justify-between font-label-sm text-[9px] text-on-primary-container">
+<span>Branch: master</span>
+<span class="font-semibold text-tertiary-fixed-dim">SHA-256</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="flex-1 flex flex-col justify-between h-full w-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Capstone Submissions 2027</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">41 Repo Hashes</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">lock</span>
+                  94% Sealed
+                </span>
+</div>
+<h4 class="font-title-md text-title-md font-serif text-primary mt-space-xs">Final Year Project &amp; Thesis Pact</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 line-clamp-2">
+                All 36 B.Tech major project repositories, original uncommitted ideas, failed research abstracts, and private benchmarks preserved for post-grad comparison.
+              </p>
+</div>
+<div class="pt-space-sm mt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Last modified: Yesterday by Lab Coordinator</span>
+<button class="text-primary hover:text-on-tertiary-container font-label-md text-label-md font-semibold flex items-center gap-1 transition-colors" type="button">
+<span>Inspect Ledger Tree</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Capsule Card 2: Hostel Block C & Lab 404 Chronicles -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md items-start">
+<!-- Twin Media Thumbnails -->
+<div class="w-full md:w-48 h-36 grid grid-cols-2 gap-1 rounded-lg overflow-hidden shrink-0">
+<div class="relative w-full h-full bg-cover bg-center" data-alt="Warm atmospheric film photograph of Indian engineering students gathered around hostel desks late at night with laptops, study lamps, tea glasses, and whiteboard code sketches." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB1PZIJiiUEic9e-unpXnvs36q8Z27tfAuDT2c_pxFdLm3ZZEOuhr6goNgE8bqsEzkuyCvS7crH5uyQg1DWQxm0RtclD7dUT4gdyYQzuZleW6mbASKPvL88j9HK1KpkLCQtfxbqZi3C64bVHg9IKn3muagS1B7OJkmAqw1OXSNVlnctU3AVCIW7cUAh4rCAP0G8P8OMsmL9TtyyGBHjnoYhRPiAsZ2yoaoAHnc8EUm7')">
+<div class="absolute inset-0 bg-primary/20"></div>
+<span class="absolute bottom-1 left-1 text-[9px] font-mono text-white bg-primary/80 px-1 rounded">Room 302</span>
+</div>
+<div class="relative w-full h-full bg-cover bg-center" data-alt="Moody cinematic sunset lighting streaming through university computer engineering laboratory windows illuminating monitor banks, circuit boards, and empty lab chairs." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDkLffE9aqpNow5Vy_8kdQR5GkDflX_lqU_IWhBZwAosOsWUy8pK3GCpVP_lrWWVuwNrpvBAf4uL02JmUu6VHvFQuPOawRbjFSh2TFStlP_REfmJmBHxybWuq07DmmMYvDnlwmtcV17iHWuz1qoSGf68GD11RZ-Rit_okOzhnDqbJhdURTDgqT05-_b1qdmfRXS6G4DCn_dKnSCC--jAE2js2UIfJw60itmOy5HSqQ8')">
+<div class="absolute inset-0 bg-primary/20"></div>
+<span class="absolute bottom-1 left-1 text-[9px] font-mono text-white bg-primary/80 px-1 rounded">Lab 404 Dusk</span>
+</div>
+</div>
+<!-- Card Content -->
+<div class="flex-1 flex flex-col justify-between h-full w-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container text-on-tertiary-container font-label-sm text-label-sm font-bold uppercase tracking-wider">Active Intake</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">12 Voice Notes • 84 Polaroids</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">1.2 GB Cached</span>
+</div>
+<h4 class="font-title-md text-title-md font-serif text-primary mt-space-xs">Hostel Block C &amp; Lab 404 Chronicles</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 line-clamp-2">
+                Unfiltered dormitory chai sessions, acoustic guitar recordings, night canteen arguments about tabs vs. spaces, and campus cat sightings.
+              </p>
+</div>
+<div class="pt-space-sm mt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-semibold flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-on-tertiary-container animate-pulse"></span>
+<span>Open for student media uploads</span>
+</span>
+<button class="px-space-sm py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span class="material-symbols-outlined text-[16px] text-tertiary-fixed-dim">upload_file</span>
+<span>Add Polaroid / Memo</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Capsule Card 3: First Placement & Offer Letters -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md items-start">
+<!-- Sealed Envelope Motif Icon Visual -->
+<div class="w-full md:w-48 h-36 bg-surface-container-low rounded-lg shrink-0 flex flex-col items-center justify-center p-space-sm text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container-lowest shadow-sm flex items-center justify-center text-on-tertiary-container mb-2">
+<span class="material-symbols-outlined text-[26px]">mark_email_read</span>
+</div>
+<span class="font-label-sm text-label-sm uppercase tracking-wider text-primary font-bold">5-Year Reunion Vault</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant mt-0.5">Target: Autumn 2032</span>
+</div>
+<!-- Card Content -->
+<div class="flex-1 flex flex-col justify-between h-full w-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container-high text-primary font-label-sm text-label-sm font-semibold">Milestone Envelope</span>
+<span class="text-on-surface-variant font-label-sm text-label-sm">58 Sealed Envelopes</span>
+</div>
+<span class="px-2 py-0.5 rounded bg-tertiary-container text-tertiary-fixed font-label-sm text-label-sm font-bold">
+                  Double-Signature Quorum
+                </span>
+</div>
+<h4 class="font-title-md text-title-md font-serif text-primary mt-space-xs">First Placement &amp; Offer Letters</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 line-clamp-2">
+                Sealed compensation packages, dream company rejection emails turned badges of honor, and early career vows unsealed together in 2032.
+              </p>
+</div>
+<div class="pt-space-sm mt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant font-mono">Encrypted with Student PGP Public Keys</span>
+<button class="text-primary hover:text-on-tertiary-container font-label-md text-label-md font-semibold flex items-center gap-1 transition-colors" type="button">
+<span>Seal Your Letter</span>
+<span class="material-symbols-outlined text-[16px]">lock_reset</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Capsule Card 4: Letter to Future Senior Architect Self (10-Yr Leap) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm hover:shadow-md transition-shadow flex flex-col md:flex-row gap-space-md items-start">
+<div class="w-full md:w-48 h-36 bg-cover bg-center rounded-lg shrink-0 relative overflow-hidden" data-alt="Artistic vintage fountain pen resting on cream textured parchment paper with subtle golden ink calligraphy strokes in an archival library ambient lighting setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuB60cNMinywbJBDsj8CM6TXuicO1N-ipriGFCwNcJX0r3_slOryTQLi1FVHNt3ooDEe5XryMFBDlFlDyt71ppYBr-z7hVMY4loAYeiQOxdY9tiWrD4OH1HLFb7Nz4SP5aWrUC0r_PwyWS_gVy0I8Nr_7qCZMX9L7qydNTRASbeWFgxCO-b8IqXkLNtFsi5pIkZQKb-Or2rL4JqFo-UkOA0hrP39bPkFV7FCOwzDlhbg')">
+<div class="absolute inset-0 bg-primary/40"></div>
+<div class="absolute inset-0 p-space-sm flex flex-col justify-between text-white">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed-dim">edit_note</span>
+<div>
+<div class="font-serif text-[12px] font-bold">Horizon 2037</div>
+<div class="text-[9px] text-tertiary-fixed opacity-90">10-Year Epoch</div>
+</div>
+</div>
+</div>
+<div class="flex-1 flex flex-col justify-between h-full w-full">
+<div>
+<div class="flex items-center justify-between gap-space-xs">
+<span class="px-2 py-0.5 rounded bg-surface-container text-primary font-label-sm text-label-sm font-semibold">Individual Private Vault</span>
+<span class="font-label-sm text-label-sm text-on-tertiary-container font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-[13px]">key</span>
+                  Zero-Knowledge Client Encrypted
+                </span>
+</div>
+<h4 class="font-title-md text-title-md font-serif text-primary mt-space-xs">Letter to Future Senior Architect Self</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 line-clamp-2">
+                What are you building in 2037? Did artificial superintelligence take our jobs or did we train the models? Remind your future self why you fell in love with computing.
+              </p>
+</div>
+<div class="pt-space-sm mt-space-sm flex items-center justify-between">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Self-addressed • Automated dispatch June 2037</span>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md font-semibold hover:bg-primary-container transition-colors flex items-center gap-1 shadow-sm" type="button">
+<span>Write Letter</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Squads Directory & Institutional Attestation (4 cols) -->
+<div class="lg:col-span-4 flex flex-col gap-space-md">
+<!-- Squads Directory Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm">
+<div class="flex items-center justify-between pb-space-xs">
+<span class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant font-semibold">Squads &amp; Core Labs</span>
+<span class="font-label-sm text-label-sm px-2 py-0.5 rounded-full bg-surface-container-low text-primary font-bold">4 Verified</span>
+</div>
+<h4 class="font-headline-md text-headline-md font-serif text-primary mt-1">Class Squads</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5 leading-snug">
+            Decentralized sub-vaults curated by specialized study groups and dorm wings.
+          </p>
+<!-- Squad Items List -->
+<div class="mt-space-md flex flex-col gap-space-xs">
+<!-- Squad 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start justify-between gap-2">
+<div class="flex items-start gap-space-xs">
+<div class="w-8 h-8 rounded-md bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">dns</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-primary font-semibold leading-tight">Systems &amp; Networks Core</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Kernel panic logs • OS lab memes</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-[10px] font-bold">Sealed</span>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-1">34 Members</div>
+</div>
+</div>
+<!-- Squad 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start justify-between gap-2">
+<div class="flex items-start gap-space-xs">
+<div class="w-8 h-8 rounded-md bg-surface-container-lowest flex items-center justify-center text-on-tertiary-container shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">psychology</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-primary font-semibold leading-tight">AI / ML Research Wing</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Loss curves • Late GPU runs</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-tertiary-container text-tertiary-fixed font-label-sm text-[10px] font-bold">Intake Open</span>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-1">48 Members</div>
+</div>
+</div>
+<!-- Squad 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start justify-between gap-2">
+<div class="flex items-start gap-space-xs">
+<div class="w-8 h-8 rounded-md bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">code</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-primary font-semibold leading-tight">Competitive Code Force</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">ICPC screams • TLE screenshots</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-[10px] font-bold">Sealed</span>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-1">29 Members</div>
+</div>
+</div>
+<!-- Squad 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors flex items-start justify-between gap-2">
+<div class="flex items-start gap-space-xs">
+<div class="w-8 h-8 rounded-md bg-surface-container-lowest flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">account_tree</span>
+</div>
+<div>
+<div class="font-label-md text-label-md text-primary font-semibold leading-tight">Web3 &amp; Distributed Systems</div>
+<div class="font-label-sm text-label-sm text-on-surface-variant mt-0.5">Byzantine fault simulations</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="px-1.5 py-0.5 rounded bg-surface-container-lowest text-primary font-label-sm text-[10px] font-bold">Sealed</span>
+<div class="font-label-sm text-[10px] text-on-surface-variant mt-1">22 Members</div>
+</div>
+</div>
+</div>
+<button class="w-full mt-space-md py-2 rounded-lg bg-surface-container-low text-primary hover:bg-surface-container font-label-md text-label-md font-semibold transition-colors flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-[16px]">groups</span>
+<span>Browse All Squad Roster (14 Squads)</span>
+</button>
+</div>
+<!-- Archival Integrity & Institutional Attestation Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="flex items-center gap-space-xs text-on-tertiary-container mb-space-xs">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+<span class="font-label-sm text-label-sm uppercase font-bold tracking-wider">Archival Attestation</span>
+</div>
+<h4 class="font-title-md text-title-md font-serif text-primary">Department Attested</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1 leading-relaxed">
+            Mathematically committed to campus archival node block <span class="font-mono text-primary font-semibold">#142071</span>. Independent validation keys stored across two faculty guardians.
+          </p>
+<!-- Storage Health Matrix -->
+<div class="mt-space-md p-space-sm bg-surface-container-low rounded-lg space-y-2">
+<div class="flex items-center justify-between text-label-sm text-label-sm">
+<span class="text-on-surface-variant">Cold Storage Node</span>
+<span class="font-semibold text-primary">CSE-ARCHIVE-NODE-01</span>
+</div>
+<div class="flex items-center justify-between text-label-sm text-label-sm">
+<span class="text-on-surface-variant">Campus Cold Sync</span>
+<span class="text-on-tertiary-container font-semibold">Synchronized 24m ago</span>
+</div>
+<div class="flex items-center justify-between text-label-sm text-label-sm">
+<span class="text-on-surface-variant">Bit Error Rate</span>
+<span class="font-mono text-primary font-semibold">0.0000% (Zero drift)</span>
+</div>
+</div>
+<!-- Wax Seal Decorative Accent Stamp -->
+<div class="mt-space-md flex items-center justify-between pt-space-xs">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-tertiary-container text-tertiary-fixed flex items-center justify-center shadow-inner">
+<span class="material-symbols-outlined text-[18px]">verified_user</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-primary font-bold leading-tight">Class of 2027 Seal</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant font-mono">ID: AGNI-CSE27-0X981A</span>
+</div>
+</div>
+<span class="font-mono text-[11px] text-on-tertiary-container font-bold">IMMUTABLE</span>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div></main></div></body></html>
